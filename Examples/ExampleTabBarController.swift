@@ -39,5 +39,14 @@ class ExampleTabBarController: UITabBarController, HeroTabBarControllerDelegate 
   func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
     return true
   }
+  
+  func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+  }
+  
+  func tabBarController(_ tabBarController: UITabBarController, willBeginCustomizing viewControllers: [UIViewController]) {
+  }
+  
+  func tabBarController(_ tabBarController: UITabBarController, animationControllerForTransitionFrom fromVC: UIViewController, to toVC: UIViewController) {
+  }
 
 }
