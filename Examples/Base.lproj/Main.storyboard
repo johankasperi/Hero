@@ -787,10 +787,10 @@
             </objects>
             <point key="canvasLocation" x="901.60000000000002" y="-69.715142428785612"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Example Tab Bar Controller-->
         <scene sceneID="KqP-VH-7Br">
             <objects>
-                <tabBarController id="udv-KB-P6K" sceneMemberID="viewController">
+                <tabBarController id="udv-KB-P6K" customClass="ExampleTabBarController" customModule="Hero" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="8xq-cA-Qbo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
