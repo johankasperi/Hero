@@ -114,6 +114,16 @@ extension HeroTransition {
           $0.heroDidEndAnimatingFrom?(viewController: fvc)
           $0.heroDidEndTransition?()
         }
+        
+        closureProcessForHeroTabDelegate(vc: fvc) {
+          $0.heroTabDidEndAnimatingTo?(viewController: tvc)
+          $0.heroTabDidEndTransition?()
+        }
+        
+        closureProcessForHeroTabDelegate(vc: tvc) {
+          $0.heroTabDidEndAnimatingFrom?(viewController: fvc)
+          $0.heroTabDidEndTransition?()
+        }
       }
       transitionContext?.finishInteractiveTransition()
     } else {
@@ -126,6 +136,16 @@ extension HeroTransition {
         closureProcessForHeroDelegate(vc: tvc) {
           $0.heroDidCancelAnimatingFrom?(viewController: fvc)
           $0.heroDidCancelTransition?()
+        }
+        
+        closureProcessForHeroTabDelegate(vc: fvc) {
+          $0.heroTabDidCancelAnimatingTo?(viewController: tvc)
+          $0.heroTabDidCancelTransition?()
+        }
+        
+        closureProcessForHeroTabDelegate(vc: tvc) {
+          $0.heroTabDidCancelAnimatingFrom?(viewController: fvc)
+          $0.heroTabDidCancelTransition?()
         }
       }
       transitionContext?.cancelInteractiveTransition()

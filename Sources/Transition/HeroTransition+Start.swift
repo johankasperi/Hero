@@ -47,6 +47,16 @@ extension HeroTransition {
         $0.heroWillStartTransition?()
         $0.heroWillStartAnimatingFrom?(viewController: fvc)
       }
+      
+      closureProcessForHeroTabDelegate(vc: fvc) {
+        $0.heroTabWillStartTransition?()
+        $0.heroTabWillStartAnimatingTo?(viewController: tvc)
+      }
+      
+      closureProcessForHeroTabDelegate(vc: tvc) {
+        $0.heroTabWillStartTransition?()
+        $0.heroTabWillStartAnimatingFrom?(viewController: fvc)
+      }
     }
 
     // take a snapshot to hide all the flashing that might happen

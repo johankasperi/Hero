@@ -34,6 +34,7 @@
 		2D1F7FEA1E49DD90004D944B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D1F7FE81E49DD90004D944B /* Main.storyboard */; };
 		2D1F7FF21E49E043004D944B /* Hero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D1F7FBF1E49DCB5004D944B /* Hero.framework */; };
 		538305711FE6234A0031C67F /* ExampleTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538305701FE6234A0031C67F /* ExampleTabBarController.swift */; };
+		538305741FE714AB0031C67F /* HeroTabBarControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538305731FE714AB0031C67F /* HeroTabBarControllerDelegate.swift */; };
 		83043017B73BC66DBB920D5C /* Pods_HeroExamples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE340F89FF0A49DD23A5A6E /* Pods_HeroExamples.framework */; };
 		A304BF841DF2717900A03345 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A304BF831DF2717900A03345 /* ImageViewController.swift */; };
 		A304BF8A1DF647FC00A03345 /* ImageCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = A304BF891DF647FC00A03345 /* ImageCells.swift */; };
@@ -198,6 +199,7 @@
 		2D1F7FE91E49DD90004D944B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2D1F7FED1E49DD90004D944B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		538305701FE6234A0031C67F /* ExampleTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTabBarController.swift; sourceTree = "<group>"; };
+		538305731FE714AB0031C67F /* HeroTabBarControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroTabBarControllerDelegate.swift; sourceTree = "<group>"; };
 		5CD4F09A588E81DA75C2BE38 /* Pods-HeroExamples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeroExamples.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HeroExamples/Pods-HeroExamples.debug.xcconfig"; sourceTree = "<group>"; };
 		86C87C73D89E75C8443B5071 /* Pods-HeroTvOSExamples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeroTvOSExamples.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HeroTvOSExamples/Pods-HeroTvOSExamples.debug.xcconfig"; sourceTree = "<group>"; };
 		A304BF831DF2717900A03345 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
@@ -438,6 +440,7 @@
 				A37D7B571E2C0CBD00AC1959 /* HeroTargetState.swift */,
 				A37D7B581E2C0CBD00AC1959 /* HeroTypes.swift */,
 				B1D816DE1EF5A5DF007B9776 /* HeroViewControllerDelegate.swift */,
+				538305731FE714AB0031C67F /* HeroTabBarControllerDelegate.swift */,
 				A306D3B51E1C7A2E00B6C23A /* Info.plist */,
 			);
 			path = Sources;
@@ -1068,6 +1071,7 @@
 				B1D816DF1EF5A5DF007B9776 /* HeroViewControllerDelegate.swift in Sources */,
 				B1193AB91E525D12005B1C87 /* HeroAnimatorViewContext.swift in Sources */,
 				A37D7B5B1E2C0CBD00AC1959 /* HeroDefaultAnimator.swift in Sources */,
+				538305741FE714AB0031C67F /* HeroTabBarControllerDelegate.swift in Sources */,
 				A37D7B5A1E2C0CBD00AC1959 /* HeroContext.swift in Sources */,
 				B17D88891EF5A5330048D3E8 /* HeroTransition+UINavigationControllerDelegate.swift in Sources */,
 				A37D7B5C1E2C0CBD00AC1959 /* HeroCoreAnimationViewContext.swift in Sources */,

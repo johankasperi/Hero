@@ -22,13 +22,6 @@
 
 import UIKit
 
-@objc public protocol HeroTabBarControllerDelegate {
-  @objc optional func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController)
-  @objc optional func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool
-  @objc optional func tabBarController(_ tabBarController: UITabBarController, willBeginCustomizing viewControllers: [UIViewController])
-  @objc optional func tabBarController(_ tabBarController: UITabBarController, animationControllerForTransitionFrom fromVC: UIViewController, to toVC: UIViewController)
-}
-
 extension HeroTransition: UITabBarControllerDelegate {
   
   public func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
@@ -54,9 +47,6 @@ extension HeroTransition: UITabBarControllerDelegate {
   
   public func tabBarController(_ tabBarController: UITabBarController, animationControllerForTransitionFrom fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
     guard !isTransitioning else { return nil }
-    if let delegate = tabBarController as? HeroTabBarControllerDelegate {
-      delegate.tabBarController?(tabBarController, animationControllerForTransitionFrom: fromVC, to: toVC)
-    }
     self.state = .notified
     let fromVCIndex = tabBarController.childViewControllers.index(of: fromVC)!
     let toVCIndex = tabBarController.childViewControllers.index(of: toVC)!
@@ -65,11 +55,5 @@ extension HeroTransition: UITabBarControllerDelegate {
     self.toViewController = toViewController ?? toVC
     self.inTabBarController = true
     return self
-  }
-  
-  public func tabBarController(_ tabBarController: UITabBarController, willBeginCustomizing viewControllers: [UIViewController]) {
-    if let delegate = tabBarController as? HeroTabBarControllerDelegate {
-      delegate.tabBarController?(tabBarController, willBeginCustomizing: viewControllers)
-    }
   }
 }
